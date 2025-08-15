@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin the Wheel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Spin the Wheel!</h1>
+        <div class="wheel" id="wheel">
+            <div class="segment" style="--i:1; --clr:#ff4d4d;">10 Points</div>
+            <div class="segment" style="--i:2; --clr:#4d79ff;">20 Points</div>
+            <div class="segment" style="--i:3; --clr:#4dff4d;">30 Points</div>
+            <div class="segment" style="--i:4; --clr:#ffeb3b;">50 Points</div>
+            <div class="segment" style="--i:5; --clr:#ff80b3;">100 Points</div>
+            <div class="segment" style="--i:6; --clr:#b366ff;">Try Again</div>
+        </div>
+        <button id="spinBtn">Spin</button>
+        <div id="result"></div>
+        <div class="actions">
+            <button id="shareBtn" onclick="shareResult()">Share Result</button>
+            <button id="registerBtn" onclick="showRegisterForm()">Register</button>
+        </div>
+        <div id="registerForm" class="register-form">
+            <h2>Register</h2>
+            <form onsubmit="submitForm(event)">
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
